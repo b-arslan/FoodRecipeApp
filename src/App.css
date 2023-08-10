@@ -51,6 +51,7 @@ body {
   align-items: center;
   gap: 5px;
   padding: 10px;
+  cursor: pointer;
 }
 
 .content-search {
@@ -75,4 +76,15 @@ body {
   color: white;
   height: 30px;
   width: 70px;
+  cursor: pointer;
+
+}
+.btn-clear button {
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, #b00000 55%, #b00000);
+  color: white;
+  height: 30px;
+  width: 70px;
+  cursor: pointer;
 }
