@@ -1,90 +1,124 @@
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-body {
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-}
-
-.App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3rem;
-}
-
-
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(to right, #4900FF 55%, #0F00FF);
-  height: 10vh;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-.header-text, .github-div {
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.header-text h2 {
-  color: #dadada;
-  font-size: 24px;
-}
-
-.github-div button {
-  border: none;
-  border-radius: 10px;
-  color: #000;
-  background-color: white;
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.content-search {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-
-.input {
-  width: 300px;
-  height: 30px;
-  border: 1px solid gray;
-  border-radius: 10px;
   
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, sans-serif; 
 }
-
+  
+  
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+  
+  
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #4900FF 55%, #0F00FF);
+    height: 10vh;
+    width: 100%;
+}
+  
+.header-text, .github-div {
+    padding: 0 30px;
+}
+  
+.header-text h2 {
+    color: #dadada;
+    font-size: 24px;
+}
+  
+.github-div button {
+    border: none;
+    border-radius: 10px;
+    color: #000;
+    background-color: white;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+  
+  
+.content-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+  
+.input {
+    width: 300px;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+  
+.btn-search button, .btn-clear button {
+    border: none;
+    border-radius: 10px;
+    color: white;
+    height: 30px;
+    width: 70px;
+    cursor: pointer;
+}
+  
 .btn-search button {
-  border: none;
-  border-radius: 10px;
-  background: linear-gradient(to right, #4900FF 55%, #0F00FF);
-  color: white;
-  height: 30px;
-  width: 70px;
-  cursor: pointer;
-
+    background: linear-gradient(to right, #4900FF 55%, #0F00FF);
 }
+  
 .btn-clear button {
-  border: none;
-  border-radius: 10px;
-  background: linear-gradient(to right, #b00000 55%, #b00000);
-  color: white;
-  height: 30px;
-  width: 70px;
-  cursor: pointer;
+    background: #b00000;
 }
+  
+  
+.centered-columns {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+  
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    align-items: stretch;
+}
+  
+  /* Responsive Tasarım */
+@media (max-width: 768px) { 
+    .content-search {
+      flex-direction: column;
+    }
+    
+    .input {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+}
+  
+@media (max-width: 480px) { 
+    .header-text h2 {
+      font-size: 20px;
+    }
+  
+    .github-div button {
+      height: 30px;
+      gap: 3px;
+      padding: 5px;
+    }
+}
+  

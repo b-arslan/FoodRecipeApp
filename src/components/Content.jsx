@@ -8,11 +8,10 @@ function Content({ item }) {
                     </figure>
                 </div>
                 <div class="card-content">
-                    {/* Burada item üzerinden gelen verilere göre içeriği doldurun. */}
-                    {/* Örnek olarak: */}
                     <div class="media-content">
-                        <p class="title is-4">{item.name}</p>
-                        <p class="subtitle is-6">{item.category}</p>
+                        <h2 class="title is-size-8">{item.name}</h2>
+                        <h3 class="subtitle is-8">{item.category}</h3>
+                        <br />
                     </div>
                     <div class="content">
                         {item.desc}
