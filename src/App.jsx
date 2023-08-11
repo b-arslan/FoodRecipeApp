@@ -1,4 +1,3 @@
-import { DataProvider } from './contexts/DataContext';
 import { useState } from 'react';
 import 'bulma/css/bulma.css';
 import './App.css';
@@ -14,26 +13,22 @@ function App() {
   };
 
   return (
-    <DataProvider>
+    <div className="App">
+      <Header />
+      <SearchBar onSearchResult={handleSearchResult} />
+      <section className='section'>
 
-        <div className="App">
-        <Header />
-        <SearchBar onSearchResult={handleSearchResult} />
-        <section className='section'>
-
-            <div className='container'>
-                <div className='grid-container mt-5'>
-                    {data.map((item, index) => (
-                        <div key={index}>
-                            <Content item={item} />
-                        </div>
-                    ))}
-                </div>
+        <div className='container'>
+            <div className='columns mt-5 is-8 centered-columns'>
+                {data.map((item, index) => (
+                    <div key={index} className='column is-5-desktop is-4-tablet'>
+                        <Content item={item} />
+                    </div>
+                ))}
             </div>
-
-        </section>
         </div>
-    </DataProvider>
+      </section>
+    </div>
   );
 }
 

@@ -1,7 +1,7 @@
 function Content({ item }) {
     return (
         <div className="main">
-            <div class="card">
+            <div className="card">
                 <div class="card-image">
                     <figure class="image is-4by3">
                         <img src={item.image || "https://bulma.io/images/placeholders/256x256.png"} alt={item.name} />

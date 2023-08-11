@@ -90,15 +90,9 @@ body {
     flex-wrap: wrap;
     margin: auto;
 }
+ 
   
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-    align-items: stretch;
-}
-  
-  /* Responsive Tasarım */
+/* Responsive Tasarım */
 @media (max-width: 768px) { 
     .content-search {
       flex-direction: column;

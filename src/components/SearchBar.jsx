@@ -3,7 +3,6 @@ import fetchData from "../api/api";
 
 function SearchBar({ onSearchResult }) {
     const [value, setValue] = useState();
-    const [data, setData] = useState([]);
 
     const handleSearch = async (query) => {
         const results = await fetchData(query);

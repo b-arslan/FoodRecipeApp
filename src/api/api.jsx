@@ -1,4 +1,4 @@
-
+// https://github.com/b-arslan/FoodRecipeApp
 const fetchData = async (query) => {
     const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`);
     const json = await response.json();
